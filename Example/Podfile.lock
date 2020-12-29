@@ -1,0 +1,33 @@
+PODS:
+  - Mapbox-iOS-SDK (5.6.1):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxAnnotationExtension (0.0.1-beta.1):
+    - Mapbox-iOS-SDK (~> 5.2)
+  - MapboxMobileEvents (0.10.2)
+  - WeMapSDK (0.1.0):
+    - Mapbox-iOS-SDK (~> 5.6.0)
+    - MapboxAnnotationExtension (~> 0.0.1-beta.1)
+
+DEPENDENCIES:
+  - Mapbox-iOS-SDK (~> 5.6.0)
+  - WeMapSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Mapbox-iOS-SDK
+    - MapboxAnnotationExtension
+    - MapboxMobileEvents
+
+EXTERNAL SOURCES:
+  WeMapSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Mapbox-iOS-SDK: b31bd62a5dd5b7e688eab787acd3d093a122f4d6
+  MapboxAnnotationExtension: d66de5561562c9d940153c0135725e671407b781
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  WeMapSDK: 0a54a4eb2e77eaf59e906fb7ac494677da15c884
+
+PODFILE CHECKSUM: f26f5948433486addc1b2422f61e9457835ff688
+
+COCOAPODS: 1.9.3
