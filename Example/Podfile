@@ -1,0 +1,12 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'WeMapSDK_Example' do
+  pod 'WeMapSDK', :path => '../'
+
+  target 'WeMapSDK_Tests' do
+    inherit! :search_paths
+    
+  end
+end
