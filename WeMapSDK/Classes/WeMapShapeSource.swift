@@ -12,11 +12,11 @@ public class WeMapShapeSource {
     }
     
     public required init(identifier: String, points: [WeMapPointAnnotation]){
-        var mglPoints = [MGLPointAnnotation]()
+        var mglPoints = [MGLPointFeature]()
         for point in points {
-            mglPoints.append(point.getAnnotation() as! MGLPointAnnotation)
+            mglPoints.append(point.getFeature())
         }
-        self.shapeSource = MGLShapeSource(identifier: identifier, shapes: mglPoints, options: nil)
+        self.shapeSource = MGLShapeSource(identifier: identifier, features: mglPoints, options: nil)
     }
     
     public required init(identifier: String, data: Data){

@@ -5,6 +5,7 @@ open class WeMapView: UIView, MGLMapViewDelegate {
     private var mapView: MGLMapView
     public weak var delegate: WeMapViewDelegate?
     private var style: MGLStyle
+    public var noCalloutMarker = false
     
     private var wemapContants: WeMapConstants
     
@@ -52,6 +53,15 @@ open class WeMapView: UIView, MGLMapViewDelegate {
         return delegate?.wemapView?(self, rightCalloutAccessoryViewFor: WeMapPointAnnotation(annotation: annotation as! MGLPointAnnotation))
         //        }
         //        return nil
+    }
+    
+    public func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        if(noCalloutMarker){
+            return MGLAnnotationView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        } else {
+            return nil
+        }
+        
     }
     
     public func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl){
@@ -193,5 +203,51 @@ open class WeMapView: UIView, MGLMapViewDelegate {
     
     public func deselectAnnotation(_ annotation: WeMapAnnotation, animated: Bool){
         mapView.deselectAnnotation(annotation.getAnnotation(), animated: animated)
+    }
+    
+    public func deselectFirstAnnotation(animated: Bool){
+        if(mapView.selectedAnnotations.first != nil){
+            mapView.deselectAnnotation(mapView.selectedAnnotations.first, animated: animated)
+        }
+    }
+    
+    public func visibleFeatures(at: CGPoint, styleLayerIdentifiers: Set<String>?) -> [WeMapPointAnnotation]{
+        var points = [WeMapPointAnnotation]()
+        for feature in mapView.visibleFeatures(at: at, styleLayerIdentifiers: styleLayerIdentifiers)
+            where feature is MGLPointFeature {
+                guard let selectedFeature = feature as? MGLPointAnnotation else {
+                    fatalError("Failed to cast selected feature as MGLPointFeature")
+                }
+                let wemapPointAnnotaion = WeMapPointAnnotation(selectedFeature.coordinate)
+                wemapPointAnnotaion.title = feature.attributes["name"] as? String ?? ""
+                points.append(wemapPointAnnotaion)
+        }
+        return points
+    }
+    
+    public func visibleFeatures(inCGRect: CGRect, styleLayerIdentifiers: Set<String>?)  -> [WeMapPointAnnotation]? {
+        var points = [WeMapPointAnnotation]()
+        for feature in mapView.visibleFeatures(in: inCGRect, styleLayerIdentifiers: styleLayerIdentifiers)
+            where feature is MGLPointFeature {
+                guard let selectedFeature = feature as? MGLPointFeature else {
+                    fatalError("Failed to cast selected feature as MGLPointFeature")
+                }
+                let wemapPointAnnotaion = WeMapPointAnnotation(selectedFeature.coordinate)
+                wemapPointAnnotaion.title = feature.attributes["name"] as? String ?? ""
+                points.append(wemapPointAnnotaion)
+        }
+        return points
+    }
+    
+    public func convert(_ point: CGPoint, toCoordinateFrom: UIView?)-> CLLocationCoordinate2D {
+        return mapView.convert(point, toCoordinateFrom: toCoordinateFrom)
+    }
+    
+    public func getGestureRecognizers() -> [UIGestureRecognizer]{
+        return mapView.gestureRecognizers!
+    }
+    
+    public func addGestureRecognizer(_ gesture: UITapGestureRecognizer){
+        mapView.addGestureRecognizer(gesture)
     }
 }

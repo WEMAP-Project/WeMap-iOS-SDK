@@ -6,7 +6,8 @@ class ViewController: UIViewController, WeMapViewDelegate {
     func WeMapViewDidFinishLoadingMap(_ wemapView: WeMapView) {
         let camera = WeMapCamera(centerCoordinate: CLLocationCoordinate2D(latitude: 21.0266469, longitude: 106.7615744), altitude: 4500, pitch: 15, heading: 180)
         wemapView.setCamera(camera: camera, withDuration: 5, animationTimingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-        wemapView.addTrafficLayer()
+        wemapView.addWMSLayer(layerID: "osm-layer", wmsURL: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", tileSize: 256)
+        //wemapView.removeWMSLayer(layerID: "osm-layer")
     }
     
     var wemapView: WeMapView?

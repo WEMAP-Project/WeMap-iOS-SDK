@@ -1,7 +1,7 @@
 import CoreLocation
 import WeMapSDK
 
-class ViewController5: UIViewController, WeMapViewDelegate {
+class ViewController6: UIViewController, WeMapViewDelegate {
     
     var wemapView: WeMapView?
     

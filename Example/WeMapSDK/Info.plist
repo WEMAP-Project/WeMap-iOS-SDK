@@ -38,6 +38,6 @@
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<string>YES</string>
 	<key>WeMapAPIKey</key>
-	<string>YOU_API_KEY</string>
+	<string>YOUR_WEMAP_API</string>
 </dict>
 </plist>

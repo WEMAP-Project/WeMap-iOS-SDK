@@ -1,7 +1,7 @@
 import CoreLocation
 import WeMapSDK
 
-class ViewController6: UIViewController, WeMapViewDelegate {
+class ViewController7: UIViewController, WeMapViewDelegate {
     
     func WeMapViewDidFinishLoadingMap(_ wemapView: WeMapView) {
 //        let point = WeMapPointAnnotation(CLLocationCoordinate2D(latitude: 21.0266469, longitude: 105.7615744))

@@ -10,6 +10,8 @@
 		1089D4975C233C3A61DE6CE1 /* Pods_WeMapSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1945AC27536D1EB1D2AF7F73 /* Pods_WeMapSDK_Example.framework */; };
 		1B1B9D989B1A6310ECCA6092 /* Pods_WeMapSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807CF6C26B05D34677FBB7E /* Pods_WeMapSDK_Tests.framework */; };
 		58ADB4B7259477930069431B /* AddMarkerSymbolExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB4B6259477930069431B /* AddMarkerSymbolExample.swift */; };
+		58B8641E25B18CF300D259DE /* AddMarkerCalloutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8641D25B18CF300D259DE /* AddMarkerCalloutExample.swift */; };
+		58B8642225B2CB1900D259DE /* AddMarkerFromGeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8642125B2CB1900D259DE /* AddMarkerFromGeoJSON.swift */; };
 		58DE23FE2595CFB1009782A7 /* DefaultCalloutExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE23FD2595CFB1009782A7 /* DefaultCalloutExample.swift */; };
 		58DE24102599C66B009782A7 /* LineStyleLayerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE240F2599C66B009782A7 /* LineStyleLayerExample.swift */; };
 		58DE241C2599CCF8009782A7 /* FillStyleLayerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE241B2599CCF8009782A7 /* FillStyleLayerExample.swift */; };
@@ -37,6 +39,8 @@
 		1945AC27536D1EB1D2AF7F73 /* Pods_WeMapSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeMapSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABD1B94DE8BE375AC397F48 /* Pods-WeMapSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeMapSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-WeMapSDK_Example/Pods-WeMapSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		58ADB4B6259477930069431B /* AddMarkerSymbolExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerSymbolExample.swift; sourceTree = "<group>"; };
+		58B8641D25B18CF300D259DE /* AddMarkerCalloutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerCalloutExample.swift; sourceTree = "<group>"; };
+		58B8642125B2CB1900D259DE /* AddMarkerFromGeoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerFromGeoJSON.swift; sourceTree = "<group>"; };
 		58DE23FD2595CFB1009782A7 /* DefaultCalloutExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCalloutExample.swift; sourceTree = "<group>"; };
 		58DE240F2599C66B009782A7 /* LineStyleLayerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStyleLayerExample.swift; sourceTree = "<group>"; };
 		58DE241B2599CCF8009782A7 /* FillStyleLayerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillStyleLayerExample.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				58DE23FD2595CFB1009782A7 /* DefaultCalloutExample.swift */,
 				58ADB4B6259477930069431B /* AddMarkerSymbolExample.swift */,
+				58B8641D25B18CF300D259DE /* AddMarkerCalloutExample.swift */,
+				58B8642125B2CB1900D259DE /* AddMarkerFromGeoJSON.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -371,7 +377,9 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				58ADB4B7259477930069431B /* AddMarkerSymbolExample.swift in Sources */,
 				58DE2464259AB584009782A7 /* DirectionExample.swift in Sources */,
+				58B8642225B2CB1900D259DE /* AddMarkerFromGeoJSON.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				58B8641E25B18CF300D259DE /* AddMarkerCalloutExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
