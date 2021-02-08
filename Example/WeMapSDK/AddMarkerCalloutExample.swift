@@ -1,6 +1,5 @@
 import CoreLocation
 import WeMapSDK
-import Mapbox
 
 class ViewController8: UIViewController, WeMapViewDelegate {
     

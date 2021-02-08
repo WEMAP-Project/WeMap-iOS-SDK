@@ -68,6 +68,10 @@ open class WeMapView: UIView, MGLMapViewDelegate {
         delegate?.wemapView?(self, annotation: WeMapPointAnnotation(annotation: annotation as! MGLPointAnnotation), calloutAccessoryControlTapped: control)
     }
     
+    public func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+        delegate?.regionDidChangeAnimated?(self, regionDidChangeAnimated: animated)
+    }
+    
     private func wemapViewDidFinishLoadingMap(){
         delegate?.WeMapViewDidFinishLoadingMap!(self)
     }
@@ -182,6 +186,20 @@ open class WeMapView: UIView, MGLMapViewDelegate {
     
     public func addLayer(_ layer: WeMapFillStyleLayer){
         self.style.addLayer(layer.getFillStyleLayer())
+    }
+    
+    public func removeLayer(_ layerID: String){
+        let WMSLayer = self.mapView.style?.layer(withIdentifier: layerID)
+        if(WMSLayer != nil){
+            self.mapView.style?.removeLayer(WMSLayer!)
+        }
+    }
+    
+    public func removeSource(_ layerID: String){
+        let WMSSource = self.mapView.style?.source(withIdentifier: layerID)
+        if(WMSSource != nil){
+            self.mapView.style?.removeSource(WMSSource!)
+        }
     }
     
     public func addAnnotation(_ annotation: WeMapAnnotation){
