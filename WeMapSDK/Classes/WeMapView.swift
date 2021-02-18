@@ -1,7 +1,12 @@
 import Mapbox
 
 open class WeMapView: UIView, MGLMapViewDelegate {
-    public var centerCoordinate: CLLocationCoordinate2D
+    public var centerCoordinate: CLLocationCoordinate2D! { get {
+        mapView.centerCoordinate
+    }
+    set {
+        mapView.centerCoordinate = newValue
+    } }
     private var mapView: MGLMapView
     public weak var delegate: WeMapViewDelegate?
     private var style: MGLStyle
@@ -18,7 +23,6 @@ open class WeMapView: UIView, MGLMapViewDelegate {
         self.wemapContants = WeMapConstants()
         self.mapView = MGLMapView(frame: frame, styleURL: self.wemapContants.getWeMapBasicStyle())
         self.style = MGLStyle()
-        self.centerCoordinate = self.mapView.centerCoordinate
         super.init(frame: frame)
         self.mapView.delegate = self
         self.mapView.attributionButton.isHidden = true
