@@ -19,6 +19,7 @@ import UIKit
     //Camera
     
     @objc optional func regionDidChangeAnimated(_ weMapView: WeMapView, regionDidChangeAnimated animated: Bool)
+    @objc optional func regionWillChangeAnimated(_ weMapView: WeMapView, regionWillChangeAnimated animated: Bool)
 //    @objc optional func weMapView(_ weMapView: WeMapView, didAdd annotationViews: [WeMapAnnotationView])
     
     @objc optional func wemapView(_ weMapView: WeMapView, annotationCanShowCallout annotation: WeMapAnnotation) -> Bool

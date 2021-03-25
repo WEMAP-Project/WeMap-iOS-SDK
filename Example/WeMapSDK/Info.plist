@@ -38,6 +38,12 @@
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<string>YES</string>
 	<key>WeMapAPIKey</key>
-	<string>YOUR_WEMAP_API</string>
+	<string>YOUR_WEMAP_API_KEY</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Vị trí của bạn sẽ được sử dụng để tối ưu việc tìm kiếm, tìm đường và dẫn đường</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Vị trí của bạn sẽ được sử dụng để tối ưu việc tìm kiếm, tìm đường và dẫn đường</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Vị trí của bạn sẽ được sử dụng để tối ưu việc tìm kiếm, tìm đường và dẫn đường</string>
 </dict>
 </plist>

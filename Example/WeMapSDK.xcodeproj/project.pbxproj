@@ -236,7 +236,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = GS45P2NBFY;
+						DevelopmentTeam = 3VY66RL748;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -525,7 +525,7 @@
 			baseConfigurationReference = 1ABD1B94DE8BE375AC397F48 /* Pods-WeMapSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GS45P2NBFY;
+				DEVELOPMENT_TEAM = 3VY66RL748;
 				INFOPLIST_FILE = WeMapSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -541,7 +541,7 @@
 			baseConfigurationReference = 5A1084CD7E0DDE656D2FD2AF /* Pods-WeMapSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GS45P2NBFY;
+				DEVELOPMENT_TEAM = 3VY66RL748;
 				INFOPLIST_FILE = WeMapSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
