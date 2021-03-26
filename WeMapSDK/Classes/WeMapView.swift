@@ -81,10 +81,14 @@ open class WeMapView: UIView, MGLMapViewDelegate {
     }
     
     public func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        if(noCalloutMarker){
-            return MGLAnnotationView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        } else {
+        if annotation is MGLUserLocation && mapView.userLocation != nil {
             return nil
+        } else {
+            if(noCalloutMarker){
+                return MGLAnnotationView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            } else {
+                return nil
+            }
         }
     }
     

@@ -61,6 +61,8 @@ class ViewController8: UIViewController, WeMapViewDelegate {
         
         wemapView?.delegate = self
         
+        wemapView?.userTrackingMode = .follow
+        
     }
     
     // MARK: - Feature interaction
