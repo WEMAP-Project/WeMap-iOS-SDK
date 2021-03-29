@@ -60,24 +60,24 @@ open class WeMapView: UIView, MGLMapViewDelegate {
     
     
     public func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool{
-        //        guard annotation is MGLPointAnnotation else {
+        guard annotation is MGLPointAnnotation else {
+            return false
+        }
         return ((delegate?.wemapView!(self, annotationCanShowCallout: WeMapPointAnnotation(annotation: annotation as! MGLPointAnnotation))) != nil)
-        //        }
-        //        return false
     }
     
     public func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
-        //        guard annotation is MGLPointAnnotation else {
+        guard annotation is MGLPointAnnotation else {
+            return nil
+        }
         return delegate?.wemapView?(self, leftCalloutAccessoryViewFor: WeMapPointAnnotation(annotation: annotation as! MGLPointAnnotation))
-        //        }
-        //        return nil
     }
     
     public func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
-        //        guard annotation is MGLPointAnnotation else {
+        guard annotation is MGLPointAnnotation else {
+            return nil
+        }
         return delegate?.wemapView?(self, rightCalloutAccessoryViewFor: WeMapPointAnnotation(annotation: annotation as! MGLPointAnnotation))
-        //        }
-        //        return nil
     }
     
     public func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
